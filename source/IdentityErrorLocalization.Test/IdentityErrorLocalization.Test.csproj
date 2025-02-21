@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <IsTestProject>True</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HttpContextMoq" Version="1.7.0" />
+    <PackageReference Include="IdentityModel" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
+    <PackageReference Include="Moq" Version="4.20.72" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.9.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IdentityErrorLocalization.de-DE\IdentityErrorLocalization.de-DE.csproj" />
+    <ProjectReference Include="..\IdentityErrorLocalization.es-ES\IdentityErrorLocalization.es-ES.csproj" />
+    <ProjectReference Include="..\IdentityErrorLocalization.fa-IR\IdentityErrorLocalization.fa-IR.csproj" />
+    <ProjectReference Include="..\IdentityErrorLocalization.fr-FR\IdentityErrorLocalization.fr-FR.csproj" />
+    <ProjectReference Include="..\IdentityErrorLocalization.pl-PL\IdentityErrorLocalization.pl-PL.csproj" />
+    <ProjectReference Include="..\IdentityErrorLocalization.pt-PT\IdentityErrorLocalization.pt-PT.csproj" />
+    <ProjectReference Include="..\IdentityErrorLocalization.ru-RU\IdentityErrorLocalization.ru-RU.csproj" />
+    <ProjectReference Include="..\IdentityErrorLocalization.sv-SE\IdentityErrorLocalization.sv-SE.csproj" />
+    <ProjectReference Include="..\IdentityErrorLocalization.tr-TR\IdentityErrorLocalization.tr-TR.csproj" />
+    <ProjectReference Include="..\IdentityErrorLocalization.uk-UA\IdentityErrorLocalization.uk-UA.csproj" />
+    <ProjectReference Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization\IdentityErrorLocalization.Multilang.csproj" />
+  </ItemGroup>
+</Project>

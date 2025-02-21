@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace PiotrTrojan.AspNetCore.IdentityErrorLocalization.Multilang
+namespace IdentityErrorLocalization.Multilang
 {
     public static class IdentityBuilderExtensions
     {

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace PiotrTrojan.AspNetCore.IdentityErrorLocalization.Multilang
+namespace IdentityErrorLocalization.Multilang
 {
     public static class IServiceCollectionExtensions
     {

@@ -11,7 +11,7 @@ using PiotrTrojan.AspNetCore.IdentityErrorLocalization.sv_SE;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.tr_TR;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.uk_UA;
 
-namespace PiotrTrojan.AspNetCore.IdentityErrorLocalization.Multilang
+namespace IdentityErrorLocalization.Multilang
 {
     public class IdentityErrorDescriberFactory
     {

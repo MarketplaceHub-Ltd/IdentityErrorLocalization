@@ -7,11 +7,11 @@ using Microsoft.Extensions.Primitives;
 using Moq;
 using System;
 using System.Collections.Generic;
+using IdentityErrorLocalization.Multilang;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.de_DE;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.es_ES;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.fa_IR;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.fr_FR;
-using PiotrTrojan.AspNetCore.IdentityErrorLocalization.Multilang;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.pl_PL;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt_PT;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.ru_RU;
@@ -20,7 +20,7 @@ using PiotrTrojan.AspNetCore.IdentityErrorLocalization.tr_TR;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.uk_UA;
 using Xunit;
 
-namespace PiotrTrojan.AspNetCore.IdentityErrorLocalization.Test
+namespace IdentityErrorLocalization.Test
 {
     public class MultilangTest
     {
