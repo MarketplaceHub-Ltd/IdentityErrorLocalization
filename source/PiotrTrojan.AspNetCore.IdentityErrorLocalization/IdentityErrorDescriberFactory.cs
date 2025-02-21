@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using System;
+using Microsoft.AspNetCore.Identity;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.de_DE;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.es_ES;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.fa_IR;
@@ -9,9 +10,8 @@ using PiotrTrojan.AspNetCore.IdentityErrorLocalization.ru_RU;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.sv_SE;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.tr_TR;
 using PiotrTrojan.AspNetCore.IdentityErrorLocalization.uk_UA;
-using System;
 
-namespace PiotrTrojan.AspNetCore.IdentityErrorLocalization
+namespace PiotrTrojan.AspNetCore.IdentityErrorLocalization.Multilang
 {
     public class IdentityErrorDescriberFactory
     {
@@ -38,7 +38,7 @@ namespace PiotrTrojan.AspNetCore.IdentityErrorLocalization
                 "sv" => new SwedishIdentityErrorDescriber(),
                 "tr" => new TurkishIdentityErrorDescriber(),
                 "uk" => new UkrainianIdentityErrorDescriber(),
-                _ => throw new ArgumentException($"Unsuported culture: {culture}.")
+                _ => throw new ArgumentException($"Unsupported culture: {culture}.")
             };
         }
     }

@@ -1,43 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>PiotrTrojan.AspNetCore.IdentityErrorLocalization.Multilang</RootNamespace>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.0.7</Version>
-    <Description>Localizations for IdentityErrorDescriber (Microsoft.AspNetCore.Identity) for .net 5.
-Resolved describer is based on "accept-language" HTTP request header.
-Contains localizations French, German, Persian, Polish, Portuguese, Russian, Spanish and Turkish.
-Contains Extensions to register proper Factory and Describer.
-    </Description>
-    <Copyright>Piotr Trojan</Copyright>
-    <PackageProjectUrl>https://github.com/piotrtrojan/PiotrTrojan.AspNetCore.IdentityErrorLocalization</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/piotrtrojan/PiotrTrojan.AspNetCore.IdentityErrorLocalization</RepositoryUrl>
-    <PackageTags>aspnetcore identity localization multilang</PackageTags>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <TargetFramework>net9.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.de-DE\GermanIdentityErrorDescriber.cs" Link="GermanIdentityErrorDescriber.cs" />
-    <Compile Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.es-ES\SpanishIdentityErrorDescriber.cs" Link="SpanishIdentityErrorDescriber.cs" />
-    <Compile Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.fa-IR\PersianIdentityErrorDescriber.cs" Link="PersianIdentityErrorDescriber.cs" />
-    <Compile Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.fr-FR\FrenchIdentityErrorDescriber.cs" Link="FrenchIdentityErrorDescriber.cs" />
-    <Compile Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.pl-PL\PolishIdentityErrorDescriber.cs" Link="PolishIdentityErrorDescriber.cs" />
-    <Compile Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT\PortugueseIdentityErrorDescriber.cs" Link="PortugueseIdentityErrorDescriber.cs" />
-    <Compile Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.sv-SE\SwedishIdentityErrorDescriber.cs" Link="SwedishIdentityErrorDescriber.cs" />
-    <Compile Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.ru-RU\RussianIdentityErrorDescriber.cs" Link="RussianIdentityErrorDescriber.cs" />
-    <Compile Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.tr-TR\TurkishIdentityErrorDescriber.cs" Link="TurkishIdentityErrorDescriber.cs" />
-    <Compile Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.uk-UA\UkrainianIdentityErrorDescriber.cs" Link="UkrainianIdentityErrorDescriber.cs" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="5.0.12" />
+    <PackageReference Include="IdentityModel" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.0" />
+    <PackageReference Include="xunit" Version="2.9.3" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="del ..\..\nuget\$(ProjectName)*&#xD;&#xA;IF exist ..\..\nuget ( echo nuget dir exists ) ELSE ( mkdir ..\..\nuget &amp;&amp; echo nuget dir created)&#xD;&#xA;dotnet pack $(ProjectFileName) -c Release --no-build --no-restore --output ..\..\nuget\" />
-  </Target>
-  
+  <ItemGroup>
+    <ProjectReference Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.de-DE\PiotrTrojan.AspNetCore.IdentityErrorLocalization.de-DE.csproj" />
+    <ProjectReference Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.es-ES\PiotrTrojan.AspNetCore.IdentityErrorLocalization.es-ES.csproj" />
+    <ProjectReference Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.fa-IR\PiotrTrojan.AspNetCore.IdentityErrorLocalization.fa-IR.csproj" />
+    <ProjectReference Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.fr-FR\PiotrTrojan.AspNetCore.IdentityErrorLocalization.fr-FR.csproj" />
+    <ProjectReference Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.pl-PL\PiotrTrojan.AspNetCore.IdentityErrorLocalization.pl-PL.csproj" />
+    <ProjectReference Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT\PiotrTrojan.AspNetCore.IdentityErrorLocalization.pt-PT.csproj" />
+    <ProjectReference Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.ru-RU\PiotrTrojan.AspNetCore.IdentityErrorLocalization.ru-RU.csproj" />
+    <ProjectReference Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.sv-SE\PiotrTrojan.AspNetCore.IdentityErrorLocalization.sv-SE.csproj" />
+    <ProjectReference Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.tr-TR\PiotrTrojan.AspNetCore.IdentityErrorLocalization.tr-TR.csproj" />
+    <ProjectReference Include="..\PiotrTrojan.AspNetCore.IdentityErrorLocalization.uk-UA\PiotrTrojan.AspNetCore.IdentityErrorLocalization.uk-UA.csproj" />
+  </ItemGroup>
 </Project>

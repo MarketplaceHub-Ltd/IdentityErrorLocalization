@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
+﻿using System;
+using Microsoft.AspNetCore.Identity;
 
-namespace PiotrTrojan.AspNetCore.IdentityErrorLocalization
+namespace PiotrTrojan.AspNetCore.IdentityErrorLocalization.Multilang
 {
     public class MultilangIdentityErrorDescriber : IdentityErrorDescriber
     {

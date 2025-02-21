@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using PiotrTrojan.AspNetCore.IdentityErrorLocalization;
-using System.Linq;
+﻿using System.Linq;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace PiotrTrojan.AspNetCore.IdentityErrorLocalization.Multilang
 {
     public static class IServiceCollectionExtensions
     {
